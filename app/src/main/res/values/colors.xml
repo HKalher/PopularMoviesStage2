@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background">#E0E0E0</color>
+    <color name="hyperlinked">#039BE5</color>
+    <color name="card_background">#3A7D92</color>
+    <color name="sliding_tab">#3A7D92</color>
+    <color name="statusBarColor">#000000</color>
+    <color name="tabsScrollColor">#FFFFFF</color>
+    <color name="rating_stars">#F9A825</color>
+    <color name="fav_red">#DD2C00</color>
+</resources>
