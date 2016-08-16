@@ -22,7 +22,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     }
 
-    //This method return the fragment for the every position in the View Pager
+    //This method return the fragment for the every position in the View Pager, This method is called only when we slide or change the tabs and not called upon rotating the screen
     @Override
     public Fragment getItem(int position) {
 

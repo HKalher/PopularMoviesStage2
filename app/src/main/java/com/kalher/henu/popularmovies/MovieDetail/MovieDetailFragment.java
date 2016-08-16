@@ -142,6 +142,16 @@ public class MovieDetailFragment extends Fragment {
                 cursor1.close();
             }
         });
+
+        ImageView shareImage = (ImageView) getView().findViewById(R.id.share_button);
+        shareImage.setImageResource(R.drawable.ic_share_white_24dp);
+        shareImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shareIt(movie);
+            }
+        });
+
     }
     private Cursor checkFavourite(String mid){
         String[] slectionArgs = {mid};
@@ -182,6 +192,15 @@ public class MovieDetailFragment extends Fragment {
         Toast toast = Toast.makeText(getContext().getApplicationContext(), "Removed From Favourite", Toast.LENGTH_SHORT);
         toast.show();
     }
+
+    private void shareIt(PopularMovies movie){
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");    // Specifies the MIME type
+        String shareBody = movie.getId();
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));    // This make the app to always show the chooser even if there is a single app corresponding to given MIME
+    }
+
     public String getGenreString(PopularMovies movie){
         MovieData movieData = new MovieData();
         HashMap<String,String> genreMap;

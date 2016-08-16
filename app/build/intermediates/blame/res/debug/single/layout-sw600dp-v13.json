@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2 original/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/activity_main.xml",
+        "source": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2 original/app/src/main/res/layout-sw600dp/activity_main.xml"
+    },
+    {
+        "merged": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2 original/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/content_main.xml",
+        "source": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2 original/app/src/main/res/layout-sw600dp/content_main.xml"
+    },
+    {
+        "merged": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/activity_main.xml",
+        "source": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2/app/src/main/res/layout-sw600dp/activity_main.xml"
+    },
+    {
+        "merged": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2 original/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2 original/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/content_main.xml",
+        "source": "/Users/Henu/Desktop/Files/update/Android/AndroidStudioWorkspace/Udacity/NanodegreeProjects/PopularMoviesStage2/app/src/main/res/layout-sw600dp/content_main.xml"
+    }
+]

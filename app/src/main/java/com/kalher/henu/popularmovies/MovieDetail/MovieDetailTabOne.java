@@ -1,5 +1,6 @@
 package com.kalher.henu.popularmovies.MovieDetail;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
@@ -8,12 +9,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -56,7 +59,6 @@ public class MovieDetailTabOne extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.v("NOTEME One","onCreateView");
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_movie_detail_tab_one, container, false);
@@ -64,7 +66,6 @@ public class MovieDetailTabOne extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        Log.v("NOTEME One","onActivityCreated");
 
         super.onActivityCreated(savedInstanceState);
         mContext = getContext();
@@ -87,12 +88,9 @@ public class MovieDetailTabOne extends Fragment {
         PopularMovies movie;
         Intent intent  = getActivity().getIntent();
         if(intent.getBundleExtra("movieObj") == null){
-            Log.v("MovieTitle"," 1 ");
             DataUtility dataUtility = new DataUtility();
             if(dataUtility.getSelectedMovie() != null){
-                Log.v("MovieTitle"," 2 ");
                 movie = dataUtility.getSelectedMovie();
-                Log.v("MovieTitle",movie.getTitle());
                 setMovieDetail(savedInstanceState,movie);
             }
         }else {
@@ -216,12 +214,24 @@ public class MovieDetailTabOne extends Fragment {
             }else {
                 APICallForBackdrops(mid);
             }
-            if(MRR != null){
-                ReviewAdapter ra = new ReviewAdapter(MRR.getMovieReviewsResult(), getContext());
-                Review_RecyclerView.setAdapter(ra);
-            }else {
-                APICallForReviews(mid);
+            if(MRR.getMovieReviewsResult().size() > 0){
+                if(MRR != null){
+                    ReviewAdapter ra = new ReviewAdapter(MRR.getMovieReviewsResult(), getContext());
+                    Review_RecyclerView.setAdapter(ra);
+                }else {
+                    APICallForReviews(mid);
+                }
+            }else if(MRR.getMovieReviewsResult() == null){
+                LinearLayout linearLayout = (LinearLayout) getView().findViewById(R.id.movie_detail_tab_one);
+
+                TextView textView = new TextView(getContext());
+                textView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                textView.setGravity(Gravity.CENTER_HORIZONTAL);
+                textView.setText("No Review For This Movie");
+
+                linearLayout.addView(textView);
             }
+
         }else {
             APICallForBackdrops(mid);
             APICallForReviews(mid);
